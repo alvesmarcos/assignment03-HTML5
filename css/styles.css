@@ -1,0 +1,50 @@
+body {
+	background-image: url("../res/noise.png"); 
+}
+video {
+	width: 368px;
+	height: auto;
+	border-style: solid;
+	border-color: #424242;
+	border-radius: 10px;
+}
+main {
+	width: 800px;
+	height: 600px;
+	float: left;
+	margin-top: 22px;
+}
+aside {
+	width: 400px;
+	height: 750px;
+	background-image: url("../res/subtlenet2.png"); 
+	float: left;
+	padding: 16px;
+	margin-left: 20px;
+	margin-top: 22px;
+	margin-bottom: 16px;
+	border-style: solid;
+	border-color: #e0e0e0;
+    border-width: 1px;
+}
+
+
+#logo {
+	display: block;
+	margin: auto;
+	width: 6.5%;
+	padding-top: 16px;
+}
+
+
+#presentation {
+	width: 640px;
+	height: 500px;
+	position: relative;
+	left: 150px;
+	border-style: solid;
+	border-color: #e0e0e0;
+    border-width: 1px;
+	border-radius: 3%;
+	opacity: 0.9;
+}
