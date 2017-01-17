@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="js/lib/popcorn-complete.min.js"></script>
+		<script type="text/javascript" src="js/engine.js"></script>
 
 		<title>LAViD | Tarefa 3</title>
 	</head>
@@ -14,27 +16,27 @@
 		</header>
 		<main>
 			<img id="presentation" src="res/shield.jpg">
-		</main>
+		</main> 	
 		<aside>
-			<video controls="controls">
+			<video id="video" controls="true">
 			  	<source src="res/movie.mp4" type="video/mp4">
 			</video> 
 			<button type="button" class="btn btn-danger">desabilitar vídeo</button>
 			<hr>
 			<h2>Sumário</h2>
 				 <div class="list-group">
-					  <a href="#" class="list-group-item">1. Introdução</a>
-					  <a href="#" class="list-group-item">2. O Campo</a>
-					  <a href="#" class="list-group-item">3. Marcando</a>
-					  <a href="#" class="list-group-item">4. Atacando</a>
-					  <a href="#" class="list-group-item">5. Turnovers</a>
-					  <a href="#" class="list-group-item">6. Scrimmage</a>
-					  <a href="#" class="list-group-item">7. Snap</a>
-					  <a href="#" class="list-group-item">8. Quarterback</a>
-					  <a href="#" class="list-group-item">9. Os Times</a>
-					  <a href="#" class="list-group-item">10. O Tempo</a>
-					  <a href="#" class="list-group-item">11. Super bowl</a>
-					  <a href="#" class="list-group-item">12. Conclusão</a>
+					<a id="sum_intro" href="#" class="list-group-item list-group-item-action">1. Introdução</a>
+					<a id="sum_campo" href="#" class="list-group-item">2. O Campo</a>
+					<a id="sum_marcando" href="#" class="list-group-item">3. Marcando</a>
+					<a id="sum_atacando" href="#" class="list-group-item">4. Atacando</a>
+					<a id="sum_turnovers" href="#" class="list-group-item">5. Turnovers</a>
+					<a id="sum_scrim" href="#" class="list-group-item">6. Scrimmage</a>
+					<a id="sum_snap" href="#" class="list-group-item">7. Snap</a>
+					<a id="sum_qb" href="#" class="list-group-item">8. Quarterback</a>
+					<a id="sum_times" href="#" class="list-group-item">9. Os Times</a>
+					<a id="sum_tempo" href="#" class="list-group-item">10. O Tempo</a>
+					<a id="sum_super" href="#" class="list-group-item">11. Super bowl</a>
+					<a id="sum_conclu" href="#" class="list-group-item">12. Conclusão</a>
 				</div>
 		</aside>
 	</body>
