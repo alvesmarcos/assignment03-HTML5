@@ -28,6 +28,29 @@ aside {
     border-width: 1px;
 }
 
+h3 {
+	margin-left: 30%;
+}
+
+#enquete {
+	 visibility: hidden;
+}
+
+.btn-group {
+	background-color: #DA2021; /* Green */
+    border: none;
+      margin-left: 330px;
+	margin-top: 22px;
+	margin-bottom: 16px;
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+    border-radius: 12px;
+}
+
 
 #logo {
 	display: block;
@@ -35,6 +58,7 @@ aside {
 	width: 6.5%;
 	padding-top: 16px;
 }
+
 
 
 #presentation {

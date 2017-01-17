@@ -22,6 +22,7 @@ function introduction() {
 		start: 1,
 		end: 60,
 		onStart: function( options ) {
+					document.getElementById("enquete").style.visibility = "hidden";
 				    image.src = "res/intro.png"
 				  	sum_introducao.style.color = "#aa00ff"
 				},
@@ -193,6 +194,7 @@ function finished() {
 		onEnd: function( options ) {
 			 	image.src = "res/shield.jpg"
 				    sum_conclusao.style.color = "#424242"
+					document.getElementById("enquete").style.visibility = "visible";
 				}
 	});
 };
@@ -227,8 +229,21 @@ window.onload = function () {
 	sum_conclusao = document.getElementById("sum_conclu");
 	video = document.getElementById("video");
 	var btn_enable_disable = document.getElementById("btn_ene_dis");
+	var btn_1 = document.getElementById("btn_1");
+	var btn_2 = document.getElementById("btn_2");
+	var btn_3 = document.getElementById("btn_3");
+	var btn_4 = document.getElementById("btn_4");
+	var btn_5 = document.getElementById("btn_5");
+
+	btn_1.onclick = function() { close(); }
+	btn_2.onclick = function() { close(); }
+	btn_3.onclick = function() { close(); }
+	btn_4.onclick = function() { close(); }
+	btn_5.onclick = function() { close(); }
+
 
 	btn_enable_disable.onclick = function() {
+		
 		if(flag){
 			video.style.height = "2px";
 			btn_enable_disable.className = "btn btn-success";
@@ -280,4 +295,19 @@ window.onload = function () {
 	}
 };
 
+/* ERROR: STATUS FICA SEMPRE EM 0 */
+function getHttpResponseText(){
+    var xhttp = new XMLHttpRequest();
+ 	xhttp.open('GET', 'http://localhost:8080/1.txt', true);
 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+       		alert('TUDO CERTO');
+        }
+    };
+    xhttp.send();
+}
+
+function close(){
+	document.getElementById("enquete").style.visibility = "hidden";
+}
