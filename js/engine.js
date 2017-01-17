@@ -1,5 +1,7 @@
 var image;
 var idvideo = "#video";
+var video;
+var flag = true;
 
 var sum_introducao;
 var sum_campo;
@@ -33,7 +35,7 @@ function field() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
 		start: 60,
-		end: 123,
+		end: 126,
 		onStart: function( options ) {
 				    image.src = "res/ocampo.png"
 				    sum_campo.style.color = "#aa00ff"
@@ -47,8 +49,8 @@ function field() {
 function score() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 123,
-		end: 249,
+		start: 126,
+		end: 251,
 		onStart: function( options ) {
 				    image.src = "res/marcando.png"
 				    sum_marcando.style.color = "#aa00ff"
@@ -62,8 +64,8 @@ function score() {
 function attacking() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 249,
-		end: 416,
+		start: 251,
+		end: 418,
 		onStart: function( options ) {
 				    image.src = "res/atacando.png"
 				    sum_atacando.style.color = "#aa00ff"
@@ -77,8 +79,8 @@ function attacking() {
 function turnovers() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 416,
-		end: 503,
+		start: 418,
+		end: 506,
 		onStart: function( options ) {
 				    image.src = "res/turnovers.png"
 				    sum_turnovers.style.color = "#aa00ff"
@@ -92,8 +94,8 @@ function turnovers() {
 function scrimmage() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 503,
-		end: 531,
+		start: 506,
+		end: 534,
 		onStart: function( options ) {
 				    image.src = "res/scrimmage.png"
 				    sum_scrimmage.style.color = "#aa00ff"
@@ -107,8 +109,8 @@ function scrimmage() {
 function snap() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 531,
-		end: 557,
+		start: 534,
+		end: 559,
 		onStart: function( options ) {
 				    image.src = "res/snap.png"
 				    sum_snap.style.color = "#aa00ff"
@@ -122,8 +124,8 @@ function snap() {
 function quarterback() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 557,
-		end: 617,
+		start: 559,
+		end: 620,
 		onStart: function( options ) {
 				    image.src = "res/quarterback.png"
 				    sum_quarterback.style.color = "#aa00ff"
@@ -137,8 +139,8 @@ function quarterback() {
 function teams() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 617,
-		end: 687,
+		start: 620,
+		end: 691,
 		onStart: function( options ) {
 				    image.src = "res/ostimes.png"
 				    sum_times.style.color = "#aa00ff"
@@ -152,8 +154,8 @@ function teams() {
 function time() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 687,
-		end: 762,
+		start: 691,
+		end: 764,
 		onStart: function( options ) {
 				    image.src = "res/otempo.png"
 				    sum_tempo.style.color = "#aa00ff"
@@ -167,7 +169,7 @@ function time() {
 function superbowl() {
 	var popcorn = Popcorn(idvideo); 
 	popcorn.code({
-		start: 762,
+		start: 764,
 		end: 854,
 		onStart: function( options ) {
 				    image.src = "res/superbowl.png"
@@ -207,6 +209,59 @@ window.onload = function () {
 	sum_tempo = document.getElementById("sum_tempo");
 	sum_superbowl = document.getElementById("sum_super");
 	sum_conclusao = document.getElementById("sum_conclu");
+	video = document.getElementById("video");
+	var btn_enable_disable = document.getElementById("btn_ene_dis");
+
+	btn_enable_disable.onclick = function() {
+		if(flag){
+			video.style.height = "2px";
+			btn_enable_disable.className = "btn btn-success";
+			btn_enable_disable.innerHTML = "habilitar vídeo";
+			flag = false;
+		} else {
+			video.style.height = "auto";
+			btn_enable_disable.className = "btn btn-danger";
+			btn_enable_disable.innerHTML = "desabilitar vídeo";
+			flag = true;
+		}
+	}
+	
+	sum_introducao.onclick = function() {
+		video.currentTime = 1; 
+	}
+	sum_campo.onclick = function() {
+		video.currentTime = 60; 
+	}
+	sum_marcando.onclick = function() {
+		video.currentTime = 126; 
+	}
+	sum_atacando.onclick = function() {
+		video.currentTime = 251; 
+	}
+	sum_turnovers.onclick = function() {
+		video.currentTime = 418; 
+	}
+	sum_scrimmage.onclick = function() {
+		video.currentTime = 506; 
+	}
+	sum_snap.onclick = function() {
+		video.currentTime = 534; 
+	}
+	sum_quarterback.onclick = function() {
+		video.currentTime = 559; 
+	}
+	sum_times.onclick = function() {
+		video.currentTime = 620; 
+	}
+	sum_tempo.onclick = function() {
+		video.currentTime = 691; 
+	}
+	sum_superbowl.onclick = function() {
+		video.currentTime = 764; 
+	}
+	sum_conclusao.onclick = function() {
+		video.currentTime = 854; 
+	}
 };
 
 
