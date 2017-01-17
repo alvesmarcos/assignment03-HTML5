@@ -20,11 +20,11 @@ function introduction() {
 		start: 1,
 		end: 60,
 		onStart: function( options ) {
-				    image.src = "res/intro.png";
-				  	sum_introducao.style.color = "#aa00ff";
+				    image.src = "res/intro.png"
+				  	sum_introducao.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    sum_introducao.style.color = "#424242";
+				    sum_introducao.style.color = "#424242"
 				}
 	});
 };
@@ -35,10 +35,11 @@ function field() {
 		start: 60,
 		end: 123,
 		onStart: function( options ) {
-				    image.src = "res/ocampo.png";
+				    image.src = "res/ocampo.png"
+				    sum_campo.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_campo.style.color = "#424242"
 				}
 	});
 };
@@ -50,9 +51,10 @@ function score() {
 		end: 249,
 		onStart: function( options ) {
 				    image.src = "res/marcando.png"
+				    sum_marcando.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_marcando.style.color = "#424242"
 				}
 	});
 };
@@ -64,9 +66,10 @@ function attacking() {
 		end: 416,
 		onStart: function( options ) {
 				    image.src = "res/atacando.png"
+				    sum_atacando.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_atacando.style.color = "#424242"
 				}
 	});
 };
@@ -78,9 +81,10 @@ function turnovers() {
 		end: 503,
 		onStart: function( options ) {
 				    image.src = "res/turnovers.png"
+				    sum_turnovers.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_turnovers.style.color = "#424242"
 				}
 	});
 };
@@ -92,9 +96,10 @@ function scrimmage() {
 		end: 531,
 		onStart: function( options ) {
 				    image.src = "res/scrimmage.png"
+				    sum_scrimmage.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_scrimmage.style.color = "#424242"
 				}
 	});
 };
@@ -106,9 +111,10 @@ function snap() {
 		end: 557,
 		onStart: function( options ) {
 				    image.src = "res/snap.png"
+				    sum_snap.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_snap.style.color = "#424242"
 				}
 	});
 };
@@ -120,9 +126,10 @@ function quarterback() {
 		end: 617,
 		onStart: function( options ) {
 				    image.src = "res/quarterback.png"
+				    sum_quarterback.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_quarterback.style.color = "#424242"
 				}
 	});
 };
@@ -134,9 +141,10 @@ function teams() {
 		end: 687,
 		onStart: function( options ) {
 				    image.src = "res/ostimes.png"
+				    sum_times.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_times.style.color = "#424242"
 				}
 	});
 };
@@ -148,9 +156,10 @@ function time() {
 		end: 762,
 		onStart: function( options ) {
 				    image.src = "res/otempo.png"
+				    sum_tempo.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_tempo.style.color = "#424242"
 				}
 	});
 };
@@ -162,15 +171,13 @@ function superbowl() {
 		end: 854,
 		onStart: function( options ) {
 				    image.src = "res/superbowl.png"
+				    sum_superbowl.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    
+				    sum_superbowl.style.color = "424242"
 				}
 	});
 };
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", introduction, false);
@@ -198,7 +205,7 @@ window.onload = function () {
 	sum_quarterback = document.getElementById("sum_qb");
 	sum_times = document.getElementById("sum_times");
 	sum_tempo = document.getElementById("sum_tempo");
-	sum_superbowl = document.getElementById("sum_superbowl");
+	sum_superbowl = document.getElementById("sum_super");
 	sum_conclusao = document.getElementById("sum_conclu");
 };
 
