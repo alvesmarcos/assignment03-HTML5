@@ -176,11 +176,26 @@ function superbowl() {
 				    sum_superbowl.style.color = "#aa00ff"
 				},
 		onEnd: function( options ) {
-				    sum_superbowl.style.color = "424242"
+				    sum_superbowl.style.color = "#424242"
 				}
 	});
 };
 
+function finished() {
+	var popcorn = Popcorn(idvideo); 
+	popcorn.code({
+		start: 854,
+		end: 933,
+		onStart: function( options ) {
+				    image.src = "res/nfl-wallpaper.jpg"
+				    sum_conclusao.style.color = "#aa00ff"
+				},
+		onEnd: function( options ) {
+			 	image.src = "res/shield.jpg"
+				    sum_conclusao.style.color = "#424242"
+				}
+	});
+};
 
 document.addEventListener("DOMContentLoaded", introduction, false);
 document.addEventListener("DOMContentLoaded", field, false);
@@ -193,6 +208,7 @@ document.addEventListener("DOMContentLoaded", quarterback, false);
 document.addEventListener("DOMContentLoaded", teams, false);
 document.addEventListener("DOMContentLoaded", time, false);
 document.addEventListener("DOMContentLoaded", superbowl, false);
+document.addEventListener("DOMContentLoaded", finished, false);
 
 
 window.onload = function () {
