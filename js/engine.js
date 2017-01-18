@@ -235,11 +235,11 @@ window.onload = function () {
 	var btn_4 = document.getElementById("btn_4");
 	var btn_5 = document.getElementById("btn_5");
 
-	btn_1.onclick = function() { close(); }
-	btn_2.onclick = function() { close(); }
-	btn_3.onclick = function() { close(); }
-	btn_4.onclick = function() { close(); }
-	btn_5.onclick = function() { close(); }
+	btn_1.onclick = function() { getHttpResponseText("http://localhost:8080/1.txt"); close(); }
+	btn_2.onclick = function() { getHttpResponseText("http://localhost:8080/2.txt"); close(); }
+	btn_3.onclick = function() { getHttpResponseText("http://localhost:8080/3.txt"); close(); }
+	btn_4.onclick = function() { getHttpResponseText("http://localhost:8080/4.txt"); close(); }
+	btn_5.onclick = function() { getHttpResponseText("http://localhost:8080/5.txt"); close(); }
 
 
 	btn_enable_disable.onclick = function() {
@@ -295,14 +295,15 @@ window.onload = function () {
 	}
 };
 
-/* ERROR: STATUS FICA SEMPRE EM 0 */
-function getHttpResponseText(){
+
+function getHttpResponseText(url){
     var xhttp = new XMLHttpRequest();
- 	xhttp.open('GET', 'http://localhost:8080/1.txt', true);
+ 	xhttp.open('GET', url, true);
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-       		alert('TUDO CERTO');
+        	var result = "PARCIAL DA VOTAÇÃO\n";
+			alert(result.concat(this.responseText));
         }
     };
     xhttp.send();
